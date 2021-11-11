@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pandap</title>
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sweetalert2.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <span class="ml-5 nav-item">Pandap</span>
+                    <a class="ml-5" href="index.html">Inicio</a>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <form class="col-xl-12 col-12">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">DATOS DEL LAZAMIENTO</h6>
+                                    <small>
+                                        Nota: La red social por defecto para todos los nombres de usuario es Instagram
+                                    </small>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="titulo">Título</label>
+                                            <input type="text" class="form-control" id="titulo" placeholder=""
+                                                autocomplete="off">
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="tipo">Tipo</label>
+                                            <select class="form-control" id="tipo" name="tipo">
+                                                <option selected value="Audio oficial">Audio oficial</option>
+                                                <option value="Video oficial">Vídeo oficial</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="autor">Autor(es)</label>
+                                            <input type="text" class="form-control" id="autor" placeholder=""
+                                                autocomplete="off">
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="autor_usuario">Nombre de usuario</label>
+                                            <input type="text" class="form-control" id="autor_usuario" placeholder=""
+                                                autocomplete="off">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="modo">Modo</label>
+                                            <select class="form-control" id="modo">
+                                                <option selected value="1">Solitario</option>
+                                                <option value="2">Colaboración</option>
+                                            </select>
+
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="colaborador">Colaborador(es)</label>
+                                            <input type="text" class="form-control" id="colaborador" aria-describedby=""
+                                                placeholder="" disabled>
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="colaborador_usuario">Nombre de usuario</label>
+                                            <input type="text" class="form-control" id="colaborador_usuario"
+                                                placeholder="" disabled>
+                                        </div>
+                                        <div class="form-group col"></div>
+
+                                    </div>
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <h6 class="m-0 text-primary">Nombres de usuario y enlaces</h6>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="instrumental">Instrumental</label>
+                                            <input type="text" class="form-control" id="instrumental"
+                                                aria-describedby="" placeholder="">
+                                        </div>
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="grabacion">Grabación</label>
+                                            <input list="nombres1" class="form-control" id="grabacion" aria-describedby=""
+                                                placeholder="">
+                                            <datalist id="nombres1">
+                                                <option value="ctrlbyk">
+                                                <option value="derish.420">
+                                                <option value="alarcos_beats">
+                                                <option value="phantasievat.icy">
+                                            </datalist>
+                                            <datalist id="nombres2">
+                                                <option value="ctrlbyk">
+                                                <option value="alarcos_beats">
+                                            </datalist>
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="mezcla">Mezcla y mastering</label>
+                                            <input list="nombres2" class="form-control" id="mezcla" aria-describedby=""
+                                                placeholder="">
+                                        </div>
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="arte">Arte</label>
+                                            <input type="text" class="form-control" id="arte" aria-describedby=""
+                                                placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="row">                                      
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="video">Video</label>
+                                            <input type="text" class="form-control" id="video" aria-describedby=""
+                                                placeholder="">
+                                        </div>
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="spotify">Enlace de Spotify</label>
+                                            <input type="text" class="form-control" id="spotify" placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="otra">Otra plataforma</label>
+                                            <input type="text" class="form-control" id="otra" placeholder="">
+                                        </div>
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-xl-6">
+                                            <label for="mensaje">Mensaje personalizado</label>
+                                            <textarea name="" class="form-control" id="mensaje" cols="2"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <input class="btn btn-primary" id="clickMe" type="button"
+                                                value="Generar descripción" onclick="generar();" />
+                                            <!-- <button type="" class="btn btn-primary" onclick="generar();">Generar descripción</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Descripción</h6>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <textarea name="rsp" class="form-control" id="rsp" cols=""
+                                                rows="15"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <input class="btn btn-primary" id="click" type="button"
+                                                value="Copiar" onclick="copiar();" />
+                                            <!-- <button type="" class="btn btn-primary" onclick="generar();">Generar descripción</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Pandap | Programed by @ctrlbyk</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+</body>
+
+<script src="js/functions.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+
+</html>
