@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Pandap - Ayuda</title>
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/sweetalert2.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <span class="ml-5 nav-item">Pandap</span>
+                    <a class="ml-5" href="index.html">Inicio</a>
+                    <a class="ml-5" href="help.html">Ayuda</a>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <form class="col-xl-12 col-12">
+
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Acerca de</h6>
+                                    <small>
+                                        Nota: La red social por defecto para todos los nombres de usuario es Instagram
+                                    </small>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xl-12">
+                                            <p>
+                                                Pandap es un sistema web que pretende automatizar la creación de descripciones de YouTube para lanzamientos musicales.
+                                            </p>
+                                            <p>
+                                                Campos obligatorios: 
+                                                <ul>
+                                                    <li>Titulo</li>
+                                                    <li>Autor(es)</li>
+                                                    <li>Nombre de usuario (del autor).</li>
+                                                    <li>Colaborador(es)</li>
+                                                    <li>Nombre de usuario (de colaborador)</li>
+                                                    <li>Grabación</li>
+                                                    <li>Mezcla y mastering</li>
+                                                </ul>
+                                            </p>
+                                            <p>
+                                                Los campos <strong>Colaborador(es)</strong> y <strong>Nombre de usuario</strong> 
+                                                     (del colaborador) son obligatorios siempre y cuando el modo sea "Colaboración" en lugar de "Solitario"
+                                                     <br>
+                                                Todos los demás campos son opcionales.
+                                            </p>
+                                            <p>
+                                                De existir más de un autor, estos deben separarse por comas (,)
+                                                 de la misma forma sus nombres de usuario respetando el mismo orden en ambos casos, por ejemplo.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="autor">Autor(es)</label>
+                                            <input type="text" class="form-control" id="autor" placeholder=""
+                                                autocomplete="off" value="Alarcos, Phantasie Vat" readonly>
+                                        </div>
+
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="autor_usuario">Nombre de usuario</label>
+                                            <input type="text" class="form-control" id="autor_usuario" placeholder=""
+                                                autocomplete="off" value="alarcos_beats, phantasievat.icy" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xl-12">
+                                            <p>
+                                                Este mismo principio se aplica para el campo <strong>"Colaborador(es)"</strong>  y su respectivo 
+                                                campo de nombre de usuario en caso que los colaboradores sean más de uno.
+                                            </p>
+                                            <p>
+                                                Todos los campos posteriores a <strong>Nombres de usuario y enlaces</strong> hacen referencia a 
+                                                (como el nombre lo indica) nombres de usuarios de Instagram, por lo que dichos campos <strong>NO</strong>
+                                                deberian contener el enlace al perfil, tampoco espacios en blanco ni arrrobas (@), <strong>UNICAMENTE </strong>
+                                                el nombre de usuario, por ejemplo:
+
+                                            </p>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-12 col-xl-3">
+                                            <label for="instrumental">Instrumental</label>
+                                            <input type="text" class="form-control" id="instrumental"
+                                                aria-describedby="" placeholder="" value="alarcos_beats" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xl-12">
+                                            <p>
+                                                Los campos <strong>Enlace a Spotify</strong> y <strong>Otra plataforma</strong>, <strong>SI</strong>
+                                                son orientados a enlaces (links) de dicha plataforma en la que "Otra" puede hacer referencia a Apple Music,
+                                                o similares.
+                                            </p>
+                                            <p>
+                                                Puedes reportar bugs o proponer mejoras con un mensaje directo a mi Instagram en el siguiente botón:
+                                            </p>
+                                            <a href="http://instagram.com/ctrlbyk" target="_blank"  class="btn btn-primary" role="button">Reportar</a>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Pandap | Programed by @ctrlbyk</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+</body>
+
+<script src="js/functions.js"></script>
+<script src="js/sweetalert2.min.js"></script>
+
+</html>
