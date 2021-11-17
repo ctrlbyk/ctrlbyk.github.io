@@ -35,6 +35,30 @@ function get_value(campo) {
     return capitalize(document.getElementById(campo).value.trim());
 };
 
+function camello(control) {
+    var autor = document.getElementById(control).value.toLowerCase().trim();
+    var nueva = "";
+
+    for (var i = 0; i < autor.length; i++) {
+        if (i == 0) {
+            nueva += autor[0].toUpperCase();
+        } else {
+            if (autor[i - 1] == " ") {
+                nueva += autor[i].toUpperCase();
+            } else {
+                nueva += autor[i];
+            }
+        }
+    }
+
+    return nueva;
+};
+
+function capitalize(word) {
+    word = word.toLowerCase();
+    return word[0].toUpperCase() + word.slice(1);
+};
+
 function add(texto) {
     box.value += texto;
 }
@@ -50,9 +74,9 @@ function write_names(tmp) {
     //AÑADIR NOMBRES UNO X UNO
     for (var x = 0; x < tmp.length; x++) {
         if (x == tmp.length - 1) {
-            add(capitalize(tmp[x].trim())); //ULTIMO NOMBRE
+            add(tmp[x]); //ULTIMO NOMBRE
         } else {
-            add(capitalize(tmp[x].trim()) + ", "); //SIGUE
+            add(tmp[x] + ", "); //SIGUE
         }
     }
 };
@@ -76,7 +100,7 @@ function mark(control1, control2, property1, property2) {
     document.getElementById(control2).classList.add(property2);
 }
 
-function get_user(field){
+function get_user(field) {
     return document.getElementById(field).value.toLowerCase().replace(" ", "");
 }
 
@@ -108,7 +132,7 @@ function generar() {
         verificar("colaborador_usuario");
         ft = true;
 
-        colaborador = get_value("colaborador");
+        colaborador = camello("colaborador");
         colaborador_usuario = get_user("colaborador_usuario");
     }
 
@@ -116,13 +140,13 @@ function generar() {
     verificar("mezcla");
 
     //OBTENER VALORES PRINCIPALES - VERIFICACIONES SECUNDARIAS
-    titulo = get_value("titulo");
+    titulo = document.getElementById("titulo").value.trim();
     tipo = get_value("tipo");
-    autor = get_value("autor");
+    autor = camello("autor");
     autor_usuario = get_user("autor_usuario");
     grabacion = get_user("grabacion");
     mezcla = get_user("mezcla");
-    
+
 
     //SI HAY MAS DE 1 AUTOR
     if (autor.includes(",") || autor_usuario.includes(",")) {
@@ -144,7 +168,7 @@ function generar() {
             //SI COINCIDEN SE GUARDAN LOS DATOS
             nombres_autores = autor.split(",");
             for (var i = 0; i < nombres_autores.length; i++) {
-                nombres_autores[i] = capitalize(nombres_autores[i].trim());
+                nombres_autores[i] = nombres_autores[i].trim();
             }
             usuarios_autores = autor_usuario.split(",");
             mark("autor", "autor_usuario", "is-invalid", "is-valid");
@@ -172,7 +196,7 @@ function generar() {
                 //SI COINCIDEN SE GUARDAN LOS DATOS
                 nombres_colaboradores = colaborador.split(",");
                 for (var i = 0; i < nombres_colaboradores.length; i++) {
-                    nombres_colaboradores[i] = capitalize(nombres_colaboradores[i].trim());
+                    nombres_colaboradores[i] = nombres_colaboradores[i].trim();
                 }
                 usuarios_colaboradores = colaborador_usuario.split(",");
                 mark("colaborador", "colaborador_usuario", "is-invalid", "is-valid");
@@ -236,9 +260,9 @@ function generar() {
         add("• " + autor + ": " + "http://instagram.com/" + autor_usuario + "\n");
     }
     //FT SI HAY 
-    if(ft) {
+    if (ft) {
         //SI HAY MAS DE 1 FT
-        if(more_ft){
+        if (more_ft) {
             for (var i = 0; i < usuarios_colaboradores.length; i++) {
                 add("• " + nombres_colaboradores[i] + ": " + "http://instagram.com/" + usuarios_colaboradores[i] + "\n");
             }
@@ -253,7 +277,7 @@ function generar() {
     //SI HAY BEATMAKER
     if_exist("• Instrumental:\nhttp://instagram.com/", "instrumental");
 
-    if(grabacion == mezcla) {
+    if (grabacion == mezcla) {
         add("• Grabación, mezcla y mastering:\nhttp://instagram.com/" + grabacion + "\n\n");
     } else {
         add("• Grabación:\nhttp://instagram.com/" + grabacion + "\n");
@@ -266,9 +290,14 @@ function generar() {
     //SI HAY VIDEO
     if_exist("• Vídeo:\nhttp://instagram.com/", "video");
 
-    add("#" + titulo.replace(" ", ""));
-    if(!more_at) {
-        add(" #" + autor.replace(" ", ""));
+    add("#" + titulo.toLowerCase().replace(" ", "_"));
+
+    if (!more_at) {
+        add(" #" + autor.toLowerCase().replace(" ", "_"));
+    } else {
+        for (var i = 0; i < nombres_autores.length; i++) {
+            add(" #" + nombres_autores[i].toLowerCase().replace(" ", "_"));
+        }
     }
 
     //ENFOCAR EL RESULTADO
@@ -281,10 +310,10 @@ function generar() {
         'success'
     );
 }
-function copiar(){
+function copiar() {
     var content = document.getElementById("rsp");
 
-    if(content.value.length == 0) {
+    if (content.value.length == 0) {
         Swal.fire({
             title: "Error",
             text: "Nada que copiar",
@@ -294,19 +323,14 @@ function copiar(){
     } else {
         content.select();
         document.execCommand("copy");
-    
+
         Swal.fire(
             "Copiado",
             "Descripción copiada en el portapapeles",
             'success'
         );
-    } 
-   
-}
+    }
 
-function capitalize(word) {
-    word = word.toLowerCase();
-    return word[0].toUpperCase() + word.slice(1);
 }
 
 
