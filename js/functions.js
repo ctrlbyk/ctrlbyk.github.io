@@ -100,9 +100,9 @@ function mark(control1, control2, property1, property2) {
     document.getElementById(control2).classList.add(property2);
 }
 
-function get_user(field) {
-    return document.getElementById(field).value.toLowerCase().replace(" ", "");
-}
+function get_user(campo) {
+    return document.getElementById(campo).value.toLowerCase();
+};
 
 function generar() {
     //control del resultado
@@ -171,6 +171,9 @@ function generar() {
                 nombres_autores[i] = nombres_autores[i].trim();
             }
             usuarios_autores = autor_usuario.split(",");
+            for (var i = 0; i < usuarios_autores.length; i++) {
+                usuarios_autores[i] = usuarios_autores[i].trim().replace(" ", "");
+            }
             mark("autor", "autor_usuario", "is-invalid", "is-valid");
 
         }
@@ -199,6 +202,9 @@ function generar() {
                     nombres_colaboradores[i] = nombres_colaboradores[i].trim();
                 }
                 usuarios_colaboradores = colaborador_usuario.split(",");
+                for (var i = 0; i < usuarios_colaboradores.length; i++) {
+                    usuarios_colaboradores[i] = usuarios_colaboradores[i].trim().replace(" ", "");
+                }
                 mark("colaborador", "colaborador_usuario", "is-invalid", "is-valid");
             }
         }
