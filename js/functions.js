@@ -296,13 +296,13 @@ function generar() {
     //SI HAY VIDEO
     if_exist("• Vídeo:\nhttp://instagram.com/", "video");
 
-    add("#" + titulo.toLowerCase().replace(" ", "_"));
+    add("#" + titulo.toLowerCase().replaceAll(" ", "_"));
 
     if (!more_at) {
-        add(" #" + autor.toLowerCase().replace(" ", "_"));
+        add(" #" + autor.toLowerCase().replaceAll(" ", "_"));
     } else {
         for (var i = 0; i < nombres_autores.length; i++) {
-            add(" #" + nombres_autores[i].toLowerCase().replace(" ", "_"));
+            add(" #" + nombres_autores[i].toLowerCase().replaceAll(" ", "_"));
         }
     }
 
